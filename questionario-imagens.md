@@ -13,9 +13,14 @@
    * Nearest Neighbor
    * Bilinear
    * Bicubic
+
+   R:Nearest Neighbor é rapido, mas com imagem pixel.
+   Bilinear é mais suave, e com borões.
+   Bicubic é muito suave e detalhado, mas é lento. 
    
 2. (1,5 pontos) Por que é importante fazer backup das imagens originais antes de aplicar transformações? Cite dois cenários onde isso é crítico.
-
+R:1 pode perde a qualidade da imagem.
+2 pode erra na edição da imagem.
 ### Parte 2: Escala de Cinza
 
 3. (2,0 pontos) Compare os dois métodos de conversão para escala de cinza vistos em aula:
@@ -24,7 +29,12 @@
    
    Por que o segundo método é considerado mais preciso para a percepção humana?
 
+R: Média simples trata todas as cores iguais, mas o verde é mais importante para o olho humano.
+Luminosidade da mais atenção ao verde, que é o que vemos como mais brilhante.
+
 4. (1,5 pontos) Em processamento de imagens, por que frequentemente convertemos uma imagem para escala de cinza antes de aplicar outros algoritmos?
+
+R: É mais rápido e focado nas informações de brilho, que são mais importantes para muitas tarefas, como detecção de bordas e análise de formas.
 
 ### Parte 3: Detecção de Bordas
 
@@ -34,7 +44,8 @@
    * Laplaciano
 
 6. (1,5 pontos) Na função `pipeline_processamento()` implementada, por que aplicamos equalização de histograma antes da detecção de bordas?
-
+R:Equalização de histograma melhora o contraste e faz as áreas claras ficarem mais claras e as escuras mais escuras.
+Detecção de bordas encontra as mudanças de brilho na imagem. Se a imagem tem baixo contraste, as bordas ficam difíceis de ver.
 ### Parte 4: Aplicação Prática
 
 7. (2,0 pontos) Considere o seguinte trecho de código:

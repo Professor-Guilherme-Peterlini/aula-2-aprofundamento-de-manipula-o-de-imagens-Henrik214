@@ -77,7 +77,7 @@ def pipeline_processamento(imagem, limiar=128):
     img_equalizada = ImageOps.equalize(img_cinza)
     
     # Detecção de bordas
-    img_bordas = img_equalizada.filter(ImageFilter.FIND_EDGES)
+    c
     
     # Limiarização
     img_final = img_bordas.point(lambda x: 255 if x > limiar else 0)
